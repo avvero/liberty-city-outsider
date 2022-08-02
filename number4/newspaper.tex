@@ -1,0 +1,115 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+
+\usepackage{newspaper}
+%% [LianTze] Contains some modifications
+\usepackage{newspaper-mod}
+%%... so now you can redefine the headline and byline style if you want to.
+%% These can be issued just before any
+%% byline or headline in the paper, to
+%% individually style each article
+%%
+% \renewcommand{\headlinestyle}{\itshape\Large\lsstyle}
+% \renewcommand{\bylinestyle}{\bfseries\Large\raggedright}
+
+
+\date{\today}
+\currentvolume{1}
+\currentissue{4}
+
+%% [LianTze] The newspaper package also provides 
+%% these commands to set various metadata:
+
+%% The banner headline on the first page
+%%   (The colon after s: is to get a more
+%%   modern majuscule s in this font instead of 
+%%   the medieval tall s. For anyone interested 
+%%   in the history: 
+%%  http://medievalwriting.50megs.com/scripts/letters/historys.htm)
+\SetPaperName{Liberty City Outsider}
+
+%% The name used in the running header after
+%% the first page
+\SetHeaderName{Transformation news}
+
+%% and also...
+\SetPaperLocation{The Guild}
+\SetPaperSlogan{Первый пролетарский вестник}
+\SetPaperPrice{Free}
+
+
+% [LianTze] times (the package not the font) is rather outdated now; use newtx (see later)
+% \usepackage{times}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{multicol}
+
+\usepackage{picinpar}
+%uasage of picinpar:
+%\begin{window}[1,l,\includegraphics{},caption]xxxxx\end{window}
+
+
+%%%%%%%%%  Front matter   %%%%%%%%%%
+
+\usepackage{lipsum}
+
+\begin{document}
+
+\maketitle
+
+\begin{multicols}{3}
+
+\headline{\bf\sf\Large Ни одной пяди CD не хотим. Но и ни одного вершка CI не отдадим никому}
+Как велась битва за CI, хроника событий с фронта.
+\\\\Подробности на странице 2 >>
+% \vspace{10mm}
+\closearticle
+
+\includegraphics[width=11.2cm]{image.png}
+
+\end{multicols}
+
+\begin{multicols}{3}
+
+\headline{\bf\sf\Large С болот доносился вой и пугал селян}
+Вместе разбираем ошибки внедрения систем мониторинга и нотификации.
+\\\\Подробности на странице 2 >>
+\vspace{14mm}
+\closearticle
+
+\headline{\bf\sf\Large Тимлидская загадка: есть две задачи, какую сам сделаешь, какую делегируешь?}
+Комментарий дает профессионал, не единожды сидевший на руководительском кресле.
+\\\\Подробности на странице 3 >>
+\closearticle
+
+\headline{\bf\sf\Large Сначала "Архитектор", а потом "Разработчик".}
+Почему мы называем такой порядок естественным? Давайте поставим точку в вопросе сортировки.
+\\\\Подробности на странице 3 >>
+\closearticle
+
+\end{multicols}
+
+\begin{multicols}{3}
+
+\headline{\bf\sf\Large Массовое переселение инженеров}
+Потеря насиженных мест или новые возможности. Давайте разберемся.
+\\\\Подробности на странице 4 >>
+\closearticle
+
+\headline{\bf\sf\Large Ваш ноутбук тормозит для того, чтобы хакер ничего не смог сделать}
+Свежие идеи в области информационной безопасности
+\\\\Подробности на странице 4 >>
+\vspace{5mm}
+\closearticle
+
+\headline{\bf\sf\Large Xbox Series S}
+Когда денег на PlayStation5 нет, но играть хочеца. Расскажем о жертвах, на которые идут современные додики.
+\\\\Подробности на странице 5 >>
+\closearticle
+
+\end{multicols}
+
+\end{document}
